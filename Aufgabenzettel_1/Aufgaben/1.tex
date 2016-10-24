@@ -1,5 +1,56 @@
 \section*{\nr.1 \titone (25 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Aus 
+\begin{equation}
+  u(\nu)=\frac{8\pi h\nu^3}{c^3\left(\exp\left(\frac{h\nu}{k_BT}\right)-1\right)}
+\end{equation}
+folgt mit $\nu=\frac{c}{\lambda}$, $u(\nu)\mathrm{d}\nu=u(\lambda)\mathrm{d}\lambda$ und $\frac{|\mathrm{d}\nu|}{|\mathrm{d}\lambda|}=\frac{c}{\lambda^2}$, 
+\begin{equation}
+  u(\lambda)=\frac{8\pi hc}{\lambda^5\left(\exp\left(\frac{hc}{k_BT\lambda}\right)-1\right)}
+\end{equation}
+\item Es gilt $c=\lambda\nu$ und, nach Einstein, $\mathrm{d}c=0$, woaus folgt, dass
+\begin{equation}
+  0=\mathrm{d}c=\mathrm{d}(\lambda\nu)=\lambda \mathrm{d}\nu+\nu \mathrm{d}\lambda.
+\end{equation}
+Damit ergibt sich
+\begin{equation}
+  \frac{\mathrm{d}\nu}{\nu}=-\frac{\mathrm{d}\lambda}{\lambda}.
+\end{equation}
+
+Die Verläufe $u(\nu)$ und $u(\lambda)$ sind in \vref{fig:spektren1} und \vref{fig:spektren2} dargestellt, die Abhängigkeit des Spektrums vom Planckschen Wirkungsquantum findet sich in \vref{fig:spektren3}.
+Aus \ref{fig:spektren3} erkennt man, dass die Wahl vom Planckschen Wirkungsquantum einen sehr signifikanten Einfluss auf das Spektrum eines schwarzen Strahlers hat. Die erforderliche Genauigkeit des Werts für $h$ ist also sehr hoch.
+
+\begin{figure}[htbp]
+\centering
+\input{spektren1}
+\caption{Spektren von verschieden heißen schwarzen Körpern}
+\label{fig:spektren1}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\input{spektren2} 
+\caption{Spektren von verschieden heißen schwarzen Körpern}
+\label{fig:spektren2}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\input{spektren3}
+\caption{Spektren für verschiedene Werte von $h$}
+\label{fig:spektren3}
+\end{figure}
+
+\item Es gilt 
+\begin{equation}
+  \exp(x)=\sum_{n=0}^{\infty}\frac{x^n}{n!}=1+x+\frac{x^2}{2}+\dots.
+\end{equation}
+Für $x\to0$ folgt daraus $\exp(x)-1=x$, da die Terme höherer Ordnung vernachlässigbar werden.
+Damit folgt für große $\lambda$
+\begin{equation}
+  \frac{8\pi hc}{\lambda^5\left(\exp\left(\frac{hc}{k_BT\lambda}\right)-1\right)}\approx\frac{8\pi hc}{\lambda^5\frac{hc}{k_BT\lambda}}=\frac{8\pi k_BT}{\lambda^4}
+\end{equation}
+was das Rayleigh-Jeans-Gesetz ist.
+
 
 \end{enumerate}
