@@ -1,4 +1,41 @@
 \section*{\nr.4 \titfour (25 Punkte)}
 \begin{enumerate}[(a)]
+\item 
+Die Sonne strahlt in alle Raumrichtungen insgesamt eine Leistung von
+\begin{equation}
+S' = 4\pi R_s^2\sigma T_s^4
+\end{equation}
+aus, wobei wobei $R_s$ und $T_s$ Sonnenradius und Sonnenoberflächentemperatur bezeichnen. Vom Planeten wird der Anteil absorbiert, der sich aus dem Raumwinkelanteil des Planetenquerschnitts mit Radius $R_p$ in der Sphärenfläche mit Radius $d$, dem Abstand zwischen Sonne und Planet, ergibt. Zusätzlich muss die Albedo $\alpha = \num{0.3}$ berücksichtigt werden. Insgesamt absorbiert der Planet die Leistung:
+\begin{equation}
+S = S'(1-\alpha) \cdot \frac{\pi R_p^2}{4\pi d^2} = \frac{\pi R_s^2\sigma T_s^4 R_p^2(1-\alpha)}{d^2}
+\end{equation}
+Der Planet selbst emittiert die Leistung
+\begin{equation}
+P = 4\pi R_p^2\sigma T_p^4,
+\end{equation}
+wobei $T_p$ die Planetenoberflächentemperatur bezeichnet. Gleichsetzen von absorbierter und emittierter Leistung liefert für den Abstand $d$:
+\begin{equation}
+d = \frac{R_s T_s^2 \sqrt{1-\alpha}}{T_p^2} \approx \SI{2.61e11}{\meter} = \SI{1.74}{\astronomicalunit}
+\end{equation}
+Dabei wurden $R_s = \SI{6.963e8}{\meter}$ und $T_s = \SI{5778}{\kelvin}$ recherchiert. Die Albedo entspricht näherungsweise die der Erde. Da die Erdtemperatur etwas über \SI{0}{\celsius} liegt, ist der oben errechnete Wert für den Abstand realistisch, auch wenn atmosphärische Effekte komplett vernachlässigt wurden (falls der Planet wie die Erde eine Atmosphäre besitzt).
+\item 
+Die Wellenlänge beim Maximum des Spektrums lässt sich über das Wiensche Verschiebungsgesetz errechnen:
+\begin{equation}
+\lambda_\text{max}= \frac{\SI{0.29}{\centi\meter\kelvin}}{\SI{5800}{\kelvin}}  = \SI{500}{\nano\meter}
+\end{equation}
+Das Maximum liegt also im sichtbaren Bereich des elektromagnetischen Spektrums.
 \item
+Führt man eine Messung an einem schwarzen Körper durch, so lässt sich die spektrale Energiedichte nicht direkt messen, sondern stattdessen wird die spektrale Strahlungsdichte $E$ gemessen, die proportional zur Energiedichte $u$ ist:
+\begin{equation}
+E \propto u
+\end{equation}
+Die Proportionalitätskonstante hängt vom Abstand des Messinstruments vom schwarzen Körper ab, ist jedoch für beide Messungen gleich, da bei gleichem Abstand gemessen wird. Zu zwei verschiedenen Wellenlängen $\lambda_{1,2}$ werden also die spektralen Strahlungsleistungen $E_{1,2}$ gemessen, sodass gilt:
+\begin{align}
+E_1 &= \frac{\mu}{\lambda_1^5\left\{ \exp[hc/(\lambda_1 k T)]-1\right\}} \\
+E_2 &= \frac{\mu}{\lambda_2^5\left\{ \exp[hc/(\lambda_2 k T)]-1\right\}}
+\end{align}
+Dabei sind die Proportionalitätskonstante $\mu$ sowie die Temperatur $T$ des schwarzen Körpers unbekannt. Da die Exponentialfunktion bijektiv ist, wird dieses Gleichungssystem von zwei Gleichungen und zwei Unbekannten eindeutig gelöst, insbesondere lässt sich prinzipiell die Temperatur $T$ ermitteln. Allerdings lässt sich kein analytischer Ausdruck für die Temperatur finden, man muss sich also mit Näherungsverfahren begnügen.
+
+
+
 \end{enumerate}
