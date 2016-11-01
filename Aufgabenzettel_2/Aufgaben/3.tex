@@ -1,4 +1,38 @@
 \section*{\nr.3 \titthree (25 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Sein $N_\gamma$ die Anzahl von Photonen mit Frequenz $\nu$, die in einem bestimmten Zeitraum auf die Solarzelle treffen. Diese bringen eine Energie von
+\begin{equation}
+E = h \nu N_\gamma
+\end{equation}
+mit. Durch die Absorption durch die Solarzelle werden statistisch $\eta N_\gamma$ Elektronen aus ihrem Gitter gelöst, wobei $\eta$ die Quanteneffizienz bezeichnet. Die betragsmäßige Ladung eines Elektrons beträgt eine Elementarladung $e$, sodass die Gesamtladung
+\begin{equation}
+Q = \eta N_\gamma e
+\end{equation} 
+im betrachteten Zeitpunkt herausgeschlagen wird.
+Für die Responsivität folgt mit $c=\lambda \nu$:
+\begin{equation}
+R = \frac{Q}{E} = \frac{\eta N_\gamma e}{h \nu N_\gamma} = \frac{\eta e}{h \nu} = \frac{\eta e}{hc} \lambda
+\end{equation}
+So ergibt sich der in der Abbildung zu erklärende proportionale Zusammenhang zwischen Responsivität und Wellenlänge. Solarzellen sind effizient gebaut, sodass uns vernünftig erschien, die Quanteneffizienz in den folgenden Rechnungen auf $\eta = 1$ zu setzen. So ergibt sich für die Steigung des idealisierten Verlaufs ein Wert von ca. \SI{8e5}{\ampere\per\watt\per\meter}, der sich mit dem Wert deckt, den man durch graphisches Ablesen der Steigung erhält.
+\item Eine Skizze der spektralen Strahlungsleistung der Sonne pro Fläche ist durch \vref{fig:sonnenspektrum} gegeben.
+\begin{figure}[htbp]
+\centering
+\input{sonnenspektrum.tex}
+\caption{Spektrale Strahlungsleistung der Sonne.}
+\label{fig:sonnenspektrum}
+\end{figure}
+
+\item Sei $u(\lambda)$ die spektrale Energiedichte nach Planck. Licht eines Wellenlängenbereichs $\mathrm{d}\lambda$ strahlt mit einer Strahlungsleistung $\mathrm{d}S$ pro Fläche von
+\begin{equation}
+\mathrm{d}S = \frac{c}{4} u(\lambda) \mathrm{d}\lambda,
+\end{equation}
+wobei der Vorfaktor $c/4$ aus dem Lambertschen Gesetz folgt und auf dem letzten Zettel hergeleitet wurde. Dieses Strahlungsdifferential führt zu einem kleinen Strom von:
+\begin{equation}
+\mathrm{d} I_{pv} = A R \mathrm{d}S = \frac{2\pi c \eta e A \,\mathrm{d}\lambda}{\lambda^4\left\{\exp\left[hc/(\lambda k T)\right]-1 \right\}}
+\end{equation}
+Der Gesamtstrom ergibt sich durch Integration über einen Wellenlängenbereich $\left[\lambda_\text{min}, \lambda_\text{max} \right]$:
+\begin{equation}
+I_{pv} = \int_{\lambda_\text{min}}^{\lambda_\text{max}}\mathrm{d} I_{pv}
+\end{equation}
+Aus der Abbildung ergibt sich ein vernünftiger Wellenlängenbereich von $\left[\SI{400}{\nano\meter}, \SI{1000}{\nano\meter} \right]$, in dem die Responsivität ideal ist. Außerhalb ist sie näherungsweise null. Numerische Integration mit Python liefert $I_{pv}=\SI{2.02e5}{\ampere}$. Dieser Wert ist unrealistisch hoch, eine Abschätzung mit der Solarkonstante $\Phi_0 = \SI{1367}{\watt\per\meter\squared}$ und $R\approx\SI{0.8}{\ampere\per\watt}$ liefert dagegen $I_{pv} = \Phi_0 A R \approx \SI{11}{\ampere}$. Die nicht berücksichtigten atmosphärischen Effekte scheinen eine wesentliche Rolle für die ankommende Strahlungsleistung der Sonne zu spielen!
 \end{enumerate}

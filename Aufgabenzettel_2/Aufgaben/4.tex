@@ -1,4 +1,23 @@
 \section*{\nr.4 \titfour (25 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Die spektrale Energiedichte der Planck-Strahlung ist durch
+\begin{equation}
+u(\nu)  = \frac{8\pi h\nu^3}{c^3}\frac{1}{\exp\left[h\nu/( k T)\right]-1 }
+\end{equation}
+gegeben. Die spektrale Energiedichte ist über $u(\nu) = h \nu n(\nu)$ mit der spektralen Anzahldichte der Photonen verknüpft. Es folgt:
+\begin{equation}
+n(\nu)  = \frac{8\pi\nu^2}{c^3}\frac{1}{\exp\left[h\nu/( k T)\right]-1 }
+\end{equation}
+Die Grenzfrequenz $\nu_\text{min}$ berechnet sich über $\epsilon= h\nu_\text{min}$ zu $\nu_\text{min} = \SI{1.09e15}{\hertz}$.
+\begin{figure}[htbp]
+\centering
+\input{anzahldichte.tex}
+\caption{Anzahldichte der Photonen der Sonne.}
+\label{fig:anzahldichte}
+\end{figure}
+\item Der Anteil $q$ derjeniger Photonen, die in der Lage sind, Elektronen durch den Photoeffekt herauszulösen, ist das Verhältnis der Anzahldichte der Photonen überhalb der Grenzfrequenz und der Gesamtanzahldichte:
+\begin{equation}
+q = \frac{\int_{\nu_\text{min}}^{\infty} n(\nu) \, \mathrm{d}\nu}{\int_{0}^{\infty} n(\nu) \, \mathrm{d}\nu}
+\end{equation}
+Numerische Integration mit Python liefert für den Anteil $q\approx \num{0.0052}$.
 \end{enumerate}
