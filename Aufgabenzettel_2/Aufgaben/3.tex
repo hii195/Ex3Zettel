@@ -22,17 +22,17 @@ So ergibt sich der in der Abbildung zu erklärende proportionale Zusammenhang zw
 \label{fig:sonnenspektrum}
 \end{figure}
 
-\item Sei $u(\lambda)$ die spektrale Energiedichte nach Planck. Licht eines Wellenlängenbereichs $\mathrm{d}\lambda$ strahlt mit einer Strahlungsleistung $\mathrm{d}S$ pro Fläche von
+\item Sei $u(\lambda)$ die spektrale Energiedichte nach Planck. Licht eines Wellenlängenbereichs $\mathrm{d}\lambda$ strahlt im Abstand $d$ von der Sonne mit Radius $R_s$ mit einer Strahlungsleistung $\mathrm{d}S$ pro Fläche von
 \begin{equation}
-\mathrm{d}S = \frac{c}{4} u(\lambda) \mathrm{d}\lambda,
+\mathrm{d}S = \frac{c}{4} u(\lambda) \mathrm{d}\lambda \cdot \frac{4\pi R_s^2}{4\pi d^2},
 \end{equation}
 wobei der Vorfaktor $c/4$ aus dem Lambertschen Gesetz folgt und auf dem letzten Zettel hergeleitet wurde. Dieses Strahlungsdifferential führt zu einem kleinen Strom von:
 \begin{equation}
-\mathrm{d} I_{pv} = A R \mathrm{d}S = \frac{2\pi c \eta e A \,\mathrm{d}\lambda}{\lambda^4\left\{\exp\left[hc/(\lambda k T)\right]-1 \right\}}
+\mathrm{d} I_{pv} = A R \mathrm{d}S = \frac{2\pi c \eta e A \,\mathrm{d}\lambda}{\lambda^4\left\{\exp\left[hc/(\lambda k T)\right]-1 \right\}} \cdot \frac{R_s^2}{d^2}
 \end{equation}
 Der Gesamtstrom ergibt sich durch Integration über einen Wellenlängenbereich $\left[\lambda_\text{min}, \lambda_\text{max} \right]$:
 \begin{equation}
 I_{pv} = \int_{\lambda_\text{min}}^{\lambda_\text{max}}\mathrm{d} I_{pv}
 \end{equation}
-Aus der Abbildung ergibt sich ein vernünftiger Wellenlängenbereich von $\left[\SI{400}{\nano\meter}, \SI{1000}{\nano\meter} \right]$, in dem die Responsivität ideal ist. Außerhalb ist sie näherungsweise null. Numerische Integration mit Python liefert $I_{pv}=\SI{2.02e5}{\ampere}$. Dieser Wert ist unrealistisch hoch, eine Abschätzung mit der Solarkonstante $\Phi_0 = \SI{1367}{\watt\per\meter\squared}$ und $R\approx\SI{0.8}{\ampere\per\watt}$ liefert dagegen $I_{pv} = \Phi_0 A R \approx \SI{11}{\ampere}$. Die nicht berücksichtigten atmosphärischen Effekte scheinen eine wesentliche Rolle für die ankommende Strahlungsleistung der Sonne zu spielen!
+Aus der Abbildung ergibt sich ein vernünftiger Wellenlängenbereich von $\left[\SI{400}{\nano\meter}, \SI{1000}{\nano\meter} \right]$, in dem die Responsivität ideal ist. Außerhalb ist sie näherungsweise null. Numerische Integration mit Python liefert $I_{pv}=\SI{4.38}{\ampere}$.  
 \end{enumerate}
