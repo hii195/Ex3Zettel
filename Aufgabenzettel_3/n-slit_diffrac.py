@@ -5,7 +5,7 @@
 import numpy as np
 import pylab as plt
 
-rep = 10000
+rep = 50
 nslit = 4
 
 # constants that can be used for computation including slit geometry:
