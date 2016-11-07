@@ -23,7 +23,7 @@ plt.close()
 def intensity(phi):
         # THE FOLLOWING RESULT IS NONSENSE!
         # put the calculation of the intensity here!!!
-        result = 2.71**(-phi**2)
+        result = np.sin(nslit*phi/2)**2/(np.sin(phi/2)**2)
         return(result)
 
 
@@ -41,7 +41,7 @@ for i in range(0,rep):
         sample = 0
         while(sample == 0):
                 pos = np.random.uniform(-np.pi,+np.pi,1)
-                target = intensity(pos)
+                target = intensity(pos)/norm
                 trial = np.random.uniform(0.0,1.0,1)
                 if trial <= target:
                         data[i] = pos
