@@ -8,7 +8,12 @@ dies resultiert in einem Phasenunterschied von
 \begin{equation}
   \varphi = \frac{2 \pi \delta}{\lambda}=\frac{2 \pi \sin \alpha g}{\lambda}
 \end{equation}
-\item STILL TO DO!!!\\
+\item Es gilt 
+\begin{align}
+  E=\sum_{n=1}^N\exp\left(i\varphi n\right)&=\frac{\exp\left(i\varphi n\right) -1}{\exp\left(i \varphi\right)-1}
+  \\&=\frac{\exp\left(i\varphi N/2\right)}{\exp\left(i \varphi/2\right)}\cdot \left(\frac{\exp\left(i\varphi N/2\right)-\exp\left(-i\varphi N/2\right)}{\exp\left(i\varphi /2\right)-\exp\left(-i\varphi/2\right)}\right)\\
+  &=\frac{\exp\left(i\varphi N/2\right)}{\exp\left(i \varphi/2\right)}\cdot \frac{\sin\left(\varphi N/2\right)}{\sin\left(\varphi/2\right)}
+\end{align}
 Da $|\exp i a| = 1 \forall a$ folgt 
 \begin{equation}
   |E|=\frac{\sin\left(N \varphi/2\right)}{\sin\left(\varphi/2\right)}
