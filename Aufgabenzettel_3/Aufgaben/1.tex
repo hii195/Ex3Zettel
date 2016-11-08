@@ -1,5 +1,51 @@
 \section*{\nr.1 \titone (25 Punkte)}
 \begin{enumerate}[(a)]
+\item 
+Wir sind davon ausgegangen, dass zum Zeitpunkt $t=0$ der Stromkreis geschlossen wurde, mathematisch durch die Heaviside-Funktion ausgedrückt:
+\begin{equation}
+Q(t) = Q_0 e^{-\gamma t} e^{i\omega_0 t}\Theta(t); \quad \gamma\in\mathbb{R}_{>0}
+\end{equation}
+Dadurch muss in der Fouriertransformation das Integral nur für positive Zeiten ausgewertet werden. Es folgt für die Fourier-Transformierte:
+\begin{align}
+q(\omega) &= \frac{1}{\sqrt{2\pi}}\int_0^{\infty} e^{-\gamma t} e^{i\omega_0 t} e^{-i\omega t} \,\mathrm{d}t\\ 
+&= \frac{Q_0}{\sqrt{2\pi}} \left. \frac{1}{-\gamma-i(\omega-\omega_0)}e^{[-\gamma-i(\omega-\omega_0)]t} \right|_{t=0}^{\infty} \\
+\intertext{Wegen $\gamma>0$ verschwindet die obere Grenze und es folgt:}
+q(\omega)&= \frac{Q_0}{\sqrt{2\pi}} \frac{1}{\gamma-i(\omega+\omega_0)}
+\end{align}
+\item Zur Berechnung des Spektrums wird zunächst das komplex Konjugierte zu $q(\omega)$ berechnet:
+\begin{equation}
+q^*(\omega) =\frac{Q_0}{\sqrt{2\pi}} \left[ \frac{\gamma-i(\omega-\omega_0)}{\gamma^2+(\omega-\omega_0)^2}\right]^* = \frac{Q_0}{\sqrt{2\pi}} \frac{\gamma+i(\omega-\omega_0)}{\gamma^2+(\omega-\omega_0)^2}
+\end{equation}
+Für das Spektrum folgt dann direkt:
+\begin{equation}
+|q(\omega)|^2 = q(\omega) * [q(\omega)]^* = \frac{Q_0^2}{2\pi} \frac{1}{\gamma^2+(\omega-\omega_0)^2}
+\end{equation}
+\item Die Phase $\phi(\omega)$ ergibt sich durch:
+\begin{equation}
+\tan \varphi(\omega) = \frac{\text{Im}(q)}{\text{Re}(q)} = \frac{\omega_0-\omega}{\gamma}
+\end{equation}
+Also folgt:
+\begin{equation}
+\varphi(\omega) = \arctan \frac{\omega_0-\omega}{\gamma}
+\end{equation}
+
 \item
+Eine Abbildung des Spektrums ist durch \vref{fig:spektrum} für verschiedene $\gamma$ gegeben. Man erkennt, dass die Breite des Spektrums sich mit zunehmendem $\gamma$ relativ zu seiner (gleichzeitig sinkenden) Höhe vergrößert. Die Phase ist in \vref{fig:phase} abgebildet.
+\begin{figure}[htbp]
+\centering
+\input{spektrum.tex}
+\caption{Spektrum $q(\omega)$ in \emph{einheitenlosen} Größen. Die relative Breite des Spektrums wächst mit steigendem $\gamma$.}
+\label{fig:spektrum}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\input{phase.tex}
+\caption{Phase $\varphi(\omega)$ in \emph{einheitenlosen} Größen}
+\label{fig:phase}
+\end{figure}
+
+
+
 
 \end{enumerate}
