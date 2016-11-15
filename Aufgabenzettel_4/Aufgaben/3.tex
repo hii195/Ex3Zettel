@@ -1,0 +1,32 @@
+\section*{\nr.3 \titthree (25 Punkte)}
+\begin{enumerate}[(a)]
+\item Die Superposition der gegebenen Wellenfunktionen sich durch
+\begin{equation}
+\psi(x) = \cos{\alpha}\cdot\psi_{n,0}\cos{\left(\frac{\pi n x}{\lambda}\right)} + \sin{\alpha}\cdot\psi_{m,0}\cos{\left(\frac{\pi m x}{\lambda}\right)}
+\end{equation}
+gegeben. Zuerst wird die Normierung der Teilfunktionen ermittelt:
+\begin{equation}
+1 \overset{!}{=} \Braket{\psi_n (x)|\psi_n(x)} = \psi_{n,0}^2 \int_{-\lambda}^{\lambda}\mathrm{d}x \cdot {\cos^2{\left(\frac{\pi n x}{\lambda}\right)}} = \psi_{n,0}^2  \lambda
+\end{equation}
+Die letzte Gleichheit folgt unmittelbar aus der Symmetrie der $\cos^2$-Funktion. Es folgt (mit analoger Rechnung für das $m$-Funktionensystem) $\psi_{m,0} = \psi_{n,0} = 1/\sqrt{\lambda}$.
+
+\item Nun wird die Normierung für die superponierte Wellenfunktion überprüft, wobei ausgenutzt wird, dass die oben definierten und normierten Funktionen $(\psi_j)_{j\in\mathbb{N}}$ ein orthonormale Hilbertraumbasis bilden:
+\begin{align}
+\Braket{\psi,\psi} &= \cos^2{\alpha} \Braket{\psi_n|\psi_n} + \sin^2{\alpha} \Braket{\psi_m|\psi_m} + 2 \sin{\alpha}\cos{\alpha}\Braket{\psi_n|\psi_m} \\
+&= \cos^2\alpha + \sin^2 \alpha + 2\sin\alpha\cos\alpha \, \delta_{mn} = 1 + \delta_{mn}\sin {2\alpha}
+\end{align}
+Daran sieht man, dass die superponierte Wellenfunktion $\psi(x)$ nur für $n\neq m$ für alle $\alpha$ richtig normiert ist.
+\item Skizzen für $\psi(x)$ und $|\psi(x)|^2$ für $\alpha=\pi/4$ und $m=n+1=3$ sind durch \vref{fig:psi,fig:psisquared} gegeben.
+\begin{figure}[htbp]
+\centering
+\input{psi.tex}
+\caption{$\psi(x)$ für $\alpha=\pi/4$ und $m=n+1=3$ sowie $\lambda=1$ in \emph{einheitenlosen} Größen.}
+\label{fig:psi}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\input{psisquared.tex}
+\caption{$|\psi(x)|^2$ für $\alpha=\pi/4$ und $m=n+1=3$ sowie $\lambda=1$ in \emph{einheitenlosen} Größen.}
+\label{fig:psisquared}
+\end{figure}
+\end{enumerate}

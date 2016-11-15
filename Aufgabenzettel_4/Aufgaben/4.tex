@@ -1,0 +1,56 @@
+\section*{\nr.4 \titfour (25 Punkte)}
+\begin{enumerate}[(a)]
+\item Ist das Teilchen perfekt in einem Kasten eingeschlossen, so müssen an den Rändern die Knoten der Wellenfunktion liegen. Die Wellenfunktion selbst beschreibt eine stationäre stehende Welle, das heißt, ihr Betragsquadrat ist nicht nicht zeitabhängig, da ein gebundener Zustand vorliegt.
+\item In der Vorlesung wurde gezeigt, dass sich die stehenden Wellen im Kastenpotential in der Form
+\begin{equation}
+\psi_n(x,t) = 2i A \sin(k_n x) e^{i\omega_n t}
+\end{equation}
+schreiben lassen, mit einer geeigneten Normierung $A \in \mathbb{C}$, wobei $|A|=1/\sqrt{2d}$. Zur Erfüllung der Randbedingungen muss
+\begin{equation}
+k_n d = (n+1) \pi; \quad n\in \mathbb{N}_{\geq 0} 
+\end{equation}
+erfüllt sein, wobei $n$ die Anzahl der Knoten ohne Rand bezeichnet. Mit $k_n = 2\pi/\lambda_n$ folgt direkt für die Wellenlänge:
+\begin{equation}
+\lambda_n = \frac{2d}{n+1}
+\end{equation}
+und für den Impuls $p_n = h/\lambda$:
+\begin{equation}
+p_n = \frac{(n+1)\pi}{2d}
+\end{equation}
+Die Funktion der Aufenthaltswahrscheinlichkeitsdichte ist durch
+\begin{equation}
+|\psi_n(x)|^2 = \frac{2}{d} \sin^2\left[{\frac{(n+1)\pi x}{d}}\right]
+\end{equation}
+gegeben. Skizzen finden sich in \vref{fig:aufenthalt}.
+\begin{figure}[htbp]
+\centering
+\input{aufenthalt.tex}
+\caption{$|\psi_n(x)|^2$ für $d=1$ in \emph{einheitenlosen} Größen.}
+\label{fig:aufenthalt}
+\end{figure}
+
+\item Für die kinetische Energie $E_n$ folgt mit $E_n=p_n^2/(2m)$:
+\begin{equation}
+E_n = \frac{(n+1)^2\pi^2}{8d^2m}
+\end{equation}
+Insbesondere folgt für $n=0$:
+\begin{equation}
+E_0 = \frac{\pi^2}{8d^2m}
+\end{equation}
+
+Im Grenzübergang $d \to\infty$ muss, damit die Energie endlich und nichtverschwindend bleibt, die Knotenzahl über alle Grenzen wachsen. Bei graphischer Abbildung ist ab einer hinreichend großen Knotenzahl die Diskretisierung nicht mehr erkennbar und im Grenzübergang wird die Funktion kontinuierlich.
+
+\item Sowohl für Photonen als auch für massive Teilchen gilt die Beziehung
+\begin{equation}
+p = \frac{h}{\lambda},
+\end{equation}
+wobei sie für letztere die die de-Broglie-Beziehung darstellt. Für die Energie eines Photons gilt weiter:
+\begin{equation}
+E = h\nu = \frac{hc}{\lambda}
+\end{equation}
+Aus der relativistischen Energie-Impuls-Beziehung
+\begin{equation}
+E = \sqrt{p^2c^2 + m^2 c^4} = \sqrt{\frac{h^2c^2}{\lambda^2} + m^2 c^4}
+\end{equation}
+sieht man jedoch, dass für massive Teilchen ($m\neq 0$) die Energie-Wellenbeziehung anders ist, was daher rührt, dass die (Gruppen-)Geschwindigkeit von massiven Teilchen unterhalb der Lichtgeschwindigkeit liegt, d.h. $\lambda_\text{massiv} \cdot \nu_\text{massiv} < c$.
+\end{enumerate}
