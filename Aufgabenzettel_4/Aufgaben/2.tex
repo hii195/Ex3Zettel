@@ -1,4 +1,99 @@
 \section*{\nr.2 \tittwo (25 Punkte)}
+\begin{enumerate}
+\item Sei 
+\begin{equation}
+  \psi(x) = \psi_0 e^{-\frac{x^2}{4\sigma^2}}
+\end{equation}
+es wird angenommen, dass $\psi_0,\sigma\in\mathbb{R}_+$.
 \begin{enumerate}[(a)]
-\item
+\item 
+\begin{equation}
+  \int \mathrm{d}x |\psi|^2=\psi_0^2\sqrt{2\pi}\sigma^2
+\end{equation}
+\item 
+\begin{equation}
+  \langle x\rangle=\int  x |\psi|^2 \mathrm{d}x = 0,
+\end{equation}
+da man über das Produkt einer geraden mit einer ungeraden Funktion integriert.
+\item 
+\begin{equation}
+  \langle x^2\rangle=\int x^2|\psi|^2\mathrm{d}x = \sqrt{2 \pi}\psi_0^2 \sigma^3
+\end{equation}
+daraus folgt mit (b)
+\begin{equation}
+  \Delta x = \sqrt{\langle x^2\rangle-\langle x\rangle^2}=\sqrt{\langle x^2\rangle}=\psi \sqrt[4]{2 \pi} \sigma^{3/2}
+\end{equation}
+\item Es gilt 
+\begin{align}
+  \phi(p,t)&=\frac{1}{\sqrt{2 \pi \hbar}}\int_{-\infty}^{\infty}\psi_0 \exp\left(\frac{-x^2}{4\sigma^2}\right)\exp\left(-\frac{ipx}{\hbar}\right)\mathrm{d}x\\
+  &=\sqrt{\frac{2 \sigma^2}{\hbar}}\psi_0\exp\left(-\frac{p^2\sigma^2}{\hbar^2}\right)
+\end{align}
+daraus folgt
+\begin{equation}
+  \langle p \rangle= \int p |\phi(p,t)|^2 \mathrm{d}p = 0
+\end{equation}
+da man wie in (b) über das Produkt einer geraden und einer ungeraden Funktion integriert.
+\item 
+\begin{align}
+  \langle E \rangle =  \frac{\langle p^2 \rangle}{2m} &=\frac{1}{2m} \int p^2 |\phi|^2 \mathrm{d}p \\
+  &= \frac{1}{2m} \sqrt{\frac{\pi}{2}}\frac{\hbar^2 \psi_0^2}{\sigma}
+\end{align}
+\item Aus (d) und (e) folgt
+\begin{equation}
+  \Delta p = \sqrt{\langle p^2 \rangle} = \frac{\hbar \psi_0} {\sqrt{\sigma}}\sqrt[4]{\frac{\pi}{2}}
+\end{equation}
+und damit 
+\begin{equation}
+  \Delta x \Delta p = \psi_0^2\sigma^3\sqrt{\pi}\hbar
+\end{equation}
+\end{enumerate}
+\item Sei 
+\begin{equation}
+  \psi(x)=\frac{\psi_0}{\sqrt{x^2+\sigma^2}}
+\end{equation}
+es wird angenommen, dass $\psi_0,\sigma\in\mathbb{R}_+$.
+\begin{enumerate}
+\item 
+\begin{equation}
+  \int \mathrm{d}x \frac{\psi_0^2}{x^2+\sigma^2}=\frac{\psi_0^2 \pi}{\sigma^2}
+\end{equation}
+\item 
+\begin{equation}
+  \langle x \rangle = \int x|\psi(x)|^2 \mathrm{d}x=0,
+\end{equation}
+da über ein Produkt einer geraden mit einer ungeraden Funktion integriert wird.
+\item 
+\begin{align}
+  \langle x^2 \rangle &= \int x^2 \frac{\psi_0^2}{x^2+\sigma^2}\\
+  &=[\psi_0(x-\sigma \arctan (x/\sigma))]_{-\infty}^{\infty}\rightarrow \infty
+\end{align}
+dieses Integral divergiert.\\
+Da $\langle x^2 \rangle$ divergiert und $\Delta x = \sqrt{\langle x^2 \rangle}$ divergiert auch $\Delta x$.
+\item Es gilt auch hier
+\begin{align}
+  \phi(p,t)&=\frac{1}{\sqrt{2 \pi \hbar}}\int_{-\infty}^{\infty} \frac{\psi_0}{\sqrt{x^2+\sigma^2}}\exp\left(-\frac{ipx}{\hbar}\right)\mathrm{d}x \\
+  &= \phi_0 \sqrt{\frac{2}{\pi \hbar}}J_0\left(\frac{p \sigma}{\hbar}\right)
+\end{align}
+wobei $J_0$ die Besselfunktion bezeichnet.\\
+Damit folgt 
+\begin{equation}
+  \langle p \rangle = 0
+\end{equation}
+\item 
+\begin{equation}
+  \langle E \rangle = \frac{\langle p^2 \rangle}{2 m} = \frac{1}{2m} \frac{\phi_0 \sqrt{2 \pi} h^{5/2}}{\sigma^3}
+\end{equation}
+\item \begin{equation}
+  \Delta p = \sqrt{\langle p^2 \rangle} = \sqrt{\frac{\phi_0 \sqrt{2 \pi} h^{5/2}}{\sigma^3}}
+\end{equation}
+Da $\Delta x$ divergiert und $\Delta p >0 $ divergiert auch das Produkt $\Delta x \Delta p$. 
+\end{enumerate}
+\item 
+\begin{figure}[htbp]
+\centering
+\input{plots}
+\caption{Skizzen der Wellenfunktionen für $\psi_0=1$ und $\sigma=1$}
+\label{fig:plots}
+\end{figure}
+Die erste Wellenfunktion kann ein quantenmechanisches Teilchen beschreiben, sofern $\phi_0$ udn $\sigma$ entsprechend gewählt werden. Die zweite Wellenfunktion verhält sich sehr anders als wir es von einem Teilchen erwarten würden, dass das Produkt aus Orts- und Impulsunschärfe divergiert ist eine sehr ungewöhnliche Eigenschaft. 
 \end{enumerate}
