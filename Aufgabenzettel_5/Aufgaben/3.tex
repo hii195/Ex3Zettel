@@ -1,4 +1,40 @@
 \section*{\nr.3 \titthree (25 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Mit 
+\begin{equation}
+  |\psi|^2=N^2x^2\exp\left(-\frac{x^2}{2\sigma^2}\right)
+\end{equation}
+folgt
+\begin{equation}
+  \int \mathrm{d}x |\psi|^2=N^2\sigma^3\sqrt{\frac{\pi}{4}}.
+\end{equation}
+Da dies gleich $1$ sein muss folgt
+\begin{equation}
+  N=\sqrt{\frac{2}{\sigma^3\sqrt{\pi}}}.
+\end{equation}
+\item Für den wahrscheinlichsten Aufenthaltsort muss gelten
+\begin{equation}
+  \frac{\mathrm{d}|\psi|^2}{\mathrm{d}x}=0.
+\end{equation}
+damit folgt
+\begin{align}
+  0&=2 N^2 x\exp\left(-\frac{x^2}{\sigma^2}\right) -\frac{2N^2}{\sigma^2}x^3\exp\left(-\frac{x^2}{\sigma^2}\right)\\
+  &=2N^2x\exp\left(-\frac{x^2}{\sigma^2}\right)\left(1-\frac{x^2}{\sigma^2}\right)
+\end{align}
+Da $\frac{\mathrm{d}^2|\psi|^2}{\mathrm{d}x^2}(x=0)<0$ folgt, dass die Wahrscheinlichsten Aufenthaltsorte $x=\pm \sigma$ sind.
+Der Mittelwert des Orts ergibt sich aus
+\begin{equation}
+  \langle x \rangle = \int \mathrm{d}x x|\psi|^2=0
+\end{equation}
+da man über das Produkt einer geraden und einer ungeraden Funktion integriert.\\
+Eine Skizze der Wahrscheinlichkeitsdichte ist mit \vref{fig:plot} gegeben.
+\begin{figure}[htbp]
+\centering
+\input{plot}
+\caption{Wahrscheinlichkeitsdichte der gegebenen Wellenfunktion}
+\label{fig:plot}
+\end{figure}
+
+Es ist gut erkennbar, dass der Mittelwert des Teilchenorts der unwahrscheinlichste Aufenthaltsort des Teilchens ist. Auch wenn die Wahrscheinlichkeit für den Aufenthalt im Ursprung gleich Null ist, ist aufgrund der Symmetrie der Mittelwert trotzdem bei Null.
+
 \end{enumerate}
