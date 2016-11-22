@@ -1,0 +1,25 @@
+set terminal epslatex size 14cm,9cm color colortext
+set output "vgruppe.tex"
+set xlabel "$k$ in $10^{13}\\,\\si{\\meter}$" offset 0,0
+set ylabel "$v_{\\text{gr}}$ in $10^{7}\\,\\si{\\meter\\per\\second}$" offset 0,0
+set xrange [0:7]
+set yrange [0:33]
+#set logscale x
+set xtics 0,2,6 nomirror
+set ytics 0,5,30 nomirror
+#set key top
+#set size square
+#unset key
+set samples 1000
+#set arrow from 5,0 to 5,1.7 nohead dashtype 2 linewidth 2 linecolor '#000000'
+#set label "$\\omega_0$" at 4.9,-0.1
+c = 3e8
+m = 9.1e-31
+Pi = 3.1415926
+hbar = (6.626e-34)/2.0/Pi
+xumr = 1e13
+yumr = 1e-7
+f(x) = yumr*c**2*(x*xumr)/sqrt((x*xumr)**2*c**2+m**2*c**4/hbar**2)
+plot f(x) with lines linecolor '#000000' linewidth 2 notitle
+replot
+set out

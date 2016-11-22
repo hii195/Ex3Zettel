@@ -1,0 +1,25 @@
+set terminal epslatex size 14cm,9cm color colortext
+set output "vphase.tex"
+set xlabel "$k$ in $10^8\\,\\si{\\meter}$" offset 0,0
+set ylabel "$v_{\\text{ph}}$ in $10^{12}\\,\\si{\\meter\\per\\second}$" offset 0,0
+set xrange [0:11]
+set yrange [0:22]
+#set logscale x
+set xtics -2,2,10 nomirror
+set ytics 0,5,20 nomirror
+#set key top
+#set size square
+#unset key
+set samples 1000
+#set arrow from 5,0 to 5,1.7 nohead dashtype 2 linewidth 2 linecolor '#000000'
+#set label "$\\omega_0$" at 4.9,-0.1
+c = 3e8
+m = 9.1e-31
+Pi = 3.1415926
+hbar = (6.626e-34)/2.0/Pi
+xumr = 1e8
+yumr = 1e-12
+f(x) = yumr*sqrt(c**2+m**2*c**4/((x*xumr)**2*hbar**2))
+plot f(x) with lines linecolor '#000000' linewidth 2 notitle
+replot
+set out

@@ -1,4 +1,60 @@
 \section*{\nr.4 \titfour (25 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item In die Formel für die relativistische Gesamtenergie
+\begin{equation}
+E = \sqrt{p^2c^2+m^2c^4}
+\end{equation}
+werden die Beziehungen $E=\hbar \omega$ und $p= \hbar k$ eingesetzt und nach $\omega$ aufgelöst. Dies führt direkt zur Dispersionsrelation:
+\begin{equation}
+\omega(k) = \sqrt{k^2c^2+\frac{m^2c^4}{\hbar^2}}
+\label{eq:disp}
+\end{equation}
+\item Die Phasengeschwindigkeit errechnet sich zu:
+\begin{equation}
+v_\text{ph} = \frac{\omega}{k} = \sqrt{c^2+\frac{m^2c^4}{k^2\hbar^2}}
+\end{equation}
+Die Gruppengeschwindigkeit beträgt:
+\begin{equation}
+v_\text{gr} = \frac{\mathrm{d}\omega}{\mathrm{d}k} = \frac{c^2 k}{\sqrt{k^2c^2+\frac{m^2c^4}{\hbar^2}}}
+\end{equation}
+Abbildungen von Phasen- und Gruppengeschwindigkeit am Beispiel eines Elektrons sind durch \vref{fig:vphase,fig:vgruppe} gegeben.
+\begin{figure}[htbp]
+\centering
+\input{vphase.tex}
+\caption{Phasengeschwindigkeit eines Elektrons. Ansatzweise ist zu erkennen, dass $v_\text{ph}=c$ eine waagrechte Asymptote des Graphen darstellt.}
+\label{fig:vphase}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\input{vgruppe.tex}
+\caption{Gruppengeschwindigkeit eines Elektrons. Ansatzweise ist zu erkennen, dass $v_\text{ph}=c$ eine waagrechte Asymptote des Graphen darstellt.}
+\label{fig:vgruppe}
+\end{figure}
+\item Das Produkt dieser beiden Geschwindigkeiten beträgt
+\begin{equation}
+v_\text{ph}\cdot v_\text{gr} = \frac{1}{k}\sqrt{k^2c^2+\frac{m^2c^4}{\hbar^2}} \frac{c^2 k}{\sqrt{k^2c^2+\frac{m^2c^4}{\hbar^2}}} = c^2,
+\end{equation}
+ist also unabhängig von $k$ konstant.
+\item  Führt man den obigen Formalismus für $E(p) = p^2/(2m) + mc^2$ durch, so erhält man die Dispersionsrelation
+\begin{equation}
+\omega = \frac{\hbar k^2}{2m} +\frac{mc^2}{\hbar} = \frac{c k^2}{2k_C} +ck_C
+\end{equation}
+mit $k_C = mc/\hbar$. Diese Relation erhält man jedoch auch aus \vref{eq:disp} durch eine Taylor-Entwicklung um $k=0$: Es gilt:
+\begin{align}
+\frac{1}{ck_C}\omega(0) &= 1 \\
+\frac{1}{ck_C} \frac{\mathrm{d}\omega}{\mathrm{d}k}(0) &= \left. \frac{k/k_C^2}{\sqrt{1+k^2/k_C^2}}\right|_{k=0} = 0 \\
+\frac{1}{ck_C} \frac{\mathrm{d}^2\omega}{\mathrm{d}k^2}(0) &= \frac{1}{k_C^2}
+\end{align}
+Die Taylor-Entwicklung bis zur zweiten Ordnung ergibt somit:
+\begin{equation}
+\omega(k) = ck_C \left( 1 + \frac{k^2}{2k_C^2} + \mathcal{O}(k^4) \right)
+\end{equation}
+Das deckt sich mit der klassischen Erwartung.
+\item Wellenpakete werden relativistisch bei großen Impulsen, also großen $k$. Die klassische Dispersionsrelation ist quadratisch in $k$, während die relativistische Dispersionsrelation für große $k$ nur linear mit $k$ wächst. Somit zeigen relativistische Wellenpakete weniger Dispersion.
+\item Der ultrarelativistische Grenzfall kann nur mit verschwindender Ruhemasse $m$ erreicht werden. In diesem Fall reduziert sich die relativistische Dispersionsrelation~(\ref{eq:disp}) zu:
+\begin{equation}
+\omega(k) = kc
+\end{equation}
+Die Gruppen- (und auch die Phasen-) Geschwindigkeit hängen dann nicht mehr von $k$ ab, somit gibt es keine Dispersion.
 \end{enumerate}
