@@ -1,6 +1,4 @@
 \section*{\nr.1 \titone (25 Punkte)}
-\begin{enumerate}[(a)]
-\item Es wird angenommen, dass die Spaltbreite der einzelnen Spalte vernachlässigbar klein gegenüber dem Spaltabstand ist und Einzelspaltinterferenzen keine Rolle spielen.
 Das Interferenzmuster $I(y)$ ergibt sich über Fouriertransformation der Spaltlandschaft $L$
 \begin{equation}
   I(y)=|\int_{-\infty}^{\infty} \mathrm{d}x \chi_L \frac{1}{\sqrt{2 \pi}}\exp\left(ixy\right)|^2
@@ -26,4 +24,10 @@ Die Ausführung des Fourierintegrals wurde mit Mathematika durchgeführt und num
 \begin{equation}
   \frac{p_{max}}{p_{min}}=1.17.
 \end{equation}
-\end{enumerate}
+Alternativ kann man auch argumentieren, dass die Amplitude der Wellenfunktion durch den einen Spalt $25$ mal größer ist als die Amplitude der Wellenfunktion, die durch den anderen Spalt geht. Bei konstruktiver Interferenz erhält man also eine Amplitude von $26$ (in beliebigen Einheiten), bei destruktiver Interferenz eine Amplitude von $24$. Damit folgt für die Aufenthaltswahrscheinlichkeit des Teilchens im Maximum im Vergleich zum Aufenthalt im Minimum
+\begin{equation}
+  \frac{p_{max}}{p_{min}}=\frac{26^2}{24^2}=1.17
+\end{equation}
+was dem numerischen Ergebnis entspricht.
+
+
