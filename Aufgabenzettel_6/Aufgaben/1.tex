@@ -1,5 +1,29 @@
 \section*{\nr.1 \titone (25 Punkte)}
 \begin{enumerate}[(a)]
-\item
-
+\item Es wird angenommen, dass die Spaltbreite der einzelnen Spalte vernachlässigbar klein gegenüber dem Spaltabstand ist und Einzelspaltinterferenzen keine Rolle spielen.
+Das Interferenzmuster $I(y)$ ergibt sich über Fouriertransformation der Spaltlandschaft $L$
+\begin{equation}
+  I(y)=|\int_{-\infty}^{\infty} \mathrm{d}x \chi_L \frac{1}{\sqrt{2 \pi}}\exp\left(ixy\right)|^2
+\end{equation}
+Wobei $\chi_L$ die charakteristische Funktion der Spaltlandschaft ist 
+\begin{equation}
+   \chi_L(x) =
+   \begin{cases}
+     1 & \text{f"ur } 0 \leq x \leq d_1 \\
+     1 & \text{f"ur } a + d_1 \leq x \leq a + d_1 + d_2 \\
+     0  & \text{sonst}
+   \end{cases}
+\end{equation}
+Durch die Wahl von $d_2 = \frac{d_1}{25}$ ist die Bedingung dass durch den einen Spalt $25$ mal mehr Elektronen kommen sollen erfüllt, da
+\begin{equation}
+  \int_{-\infty}^{\infty} \mathrm{d}y |\int_{0}^{d_1} \mathrm{d}x \frac{1}{\sqrt{2 \pi}}\exp\left(ixy\right)|^2 =d_1
+\end{equation}
+und 
+\begin{equation}
+  \int_{-\infty}^{\infty} \mathrm{d}y |\int_{a+d_1}^{a+d_1+\frac{d_1}{25}} \mathrm{d}x \frac{1}{\sqrt{2 \pi}}\exp\left(ixy\right)|^2 =\frac{d_1}{25}
+\end{equation}
+Die Ausführung des Fourierintegrals wurde mit Mathematika durchgeführt und numerisch nach dem ersten Minimum gesucht. Für $d_1=25$ und $a=100000$ ergibt sich damit ein Verhältnis der Wahrscheinlichkeit, dass sich das Elektron in einem Interferenzmaximum landet, zu der, dass es in einem Interferenzminimum landet von
+\begin{equation}
+  \frac{p_{max}}{p_{min}}=1.17.
+\end{equation}
 \end{enumerate}
