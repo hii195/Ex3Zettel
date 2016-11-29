@@ -1,4 +1,39 @@
 \section*{\nr.3 \titthree (25 Punkte)}
-\begin{enumerate}[(a)]
-\item
-\end{enumerate}
+Im Folgenden sei das Koordinatensystem so gewählt, dass das Elektron für $x<0$ das Potential Null vorfindet (Gebiet 1) und für $x>0$ das Potential $V_0<0$ (Gebiet 2). Die Gesamtenergie sei $E>0$.
+
+Für Gebiet 1 lautet die Schrödinger-Gleichung:
+\begin{equation}
+-\frac{\hbar^2}{2m}\frac{\mathrm{d}^2 \psi_1}{\mathrm{d} x^2} = E \psi_1
+\end{equation}
+Eine Lösung ist eine harmonische Welle mit Wellenzahl $k_1 := \sqrt{2mE}/\hbar$, also:
+\begin{equation}
+\psi_1 = A\exp(ik_1 x) + B\exp(-ik_1 x); \quad A,B\in \mathbb{C}
+\end{equation}
+
+Für Gebiet 2 lautet die Schrödinger-Gleichung:
+\begin{align}
+-\frac{\hbar^2}{2m}\frac{\mathrm{d}^2 \psi_2}{\mathrm{d} x^2} +V\psi_2 &= E \psi_2\\
+\frac{\mathrm{d}^2\psi_2}{\mathrm{d}x^2} &= -\frac{2m}{\hbar^2}(E-V) \psi_2
+\end{align}
+Eine Lösung ist ebenfalls eine harmonische Welle mit Wellenzahl $k_2 := \sqrt{2m(E-V)}/\hbar$, also:
+\begin{equation}
+\psi_2 = C\exp(ik_1 x) + D\exp(-ik_1 x); \quad C,D\in \mathbb{C}
+\end{equation}
+Die Konstante $D$ muss aber anschaulich null sein, da die Welle für $x\to \infty$ nicht reflektiert werden soll.
+
+Die Übergangsbedingungen von Gebiet 1 zu Gebiet 2 (stetige Differenzierbarkeit der Wellenfunktion) liefern zudem das Gleichungssystem:
+\begin{align}
+A+B &= C \\
+ik_1 (A-B) &= ik_2 C
+\end{align}
+
+Es folgt:
+\begin{align}
+\psi_1 &= \frac{C}{2} \left[ \left(1 + \frac{k_2}{k_1} \right)\exp(ik_1x) + \left(1 - \frac{k_2}{k_1} \right)\exp(-ik_1x)  \right] \\
+\psi_2&= C \exp(ik_2x)
+\end{align}
+
+$\psi_1$ besteht aus einer nach rechts laufenden Welle, dem linken Term, und einer reflektierten Welle, dem rechten Term. Die Reflektionswahrscheinlichkeit $R$ berechnet sich aus dem Verhältnis des Betragsquadrats der reflektierten Welle und der nach rechts laufenden Welle:
+\begin{equation}
+R = \frac{(1-k_2/k_1)^2}{(1+k_2/k_1)^2} = \frac{(k_1-k_2)^2}{(k_1+k_2)^2} = \frac{(\sqrt{E}-\sqrt{E-V})^2}{(\sqrt{E}+\sqrt{E-V})^2} \approx \num{0.146}
+\end{equation}
