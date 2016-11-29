@@ -1,4 +1,30 @@
 \section*{\nr.4 \titfour (25 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Zunächst ist die Energie eines Protons bei Zimmertemperatur $E=kT/2\approx \SI{0.02}{\electronvolt}$, das heißt, klassisch könnte es den vorgegebenen Potentialwall nicht überschreiten. Beschreibt man das Austauschproton durch eine ebene Welle, und positioniert den Potentialwall auf $x\in [0,a]$, mit $a=\SI{270}{\pico\meter}$, so lautet die Wellenfunktion für das Gebiet vor dem Wall ($x<0$):
+\begin{equation}
+\psi_1=A \exp(ik x) + B\exp(-ik x); \quad k = \sqrt{\frac{2mE}{\hbar^2}}
+\end{equation}
+Im Wall dagegen wird sie durch reelle Exponentialfunktionen beschrieben:
+\begin{equation}
+\psi_2=C \exp(\alpha x) + D\exp(-\alpha x); \quad \alpha = \sqrt{\frac{2m(V_0-E)}{\hbar^2}}
+\end{equation}
+Hinter dem Wall findet die Welle sich wieder als ebene Welle mit Wellenvektor $k$ wieder, wobei es \emph{nur eine rechtslaufende} Welle gibt, und keine Reflexion: 
+\begin{equation}
+\psi_3=F \exp(ik x)
+\end{equation}
+Die Anschlussbedingungen von stetig differenzierbaren Übergängen liefert ein Gleichungssystem für die Parameter. Die gesuchte Tunnelwahrscheinlichkeit ergibt sich als Quotient des Betragsquadrats der transmittierten Welle und des rechtslaufenden Teils der einlaufenden Welle. Eine Näherung für große Barrierebreiten $a$ liefert die angegebene Formel für die Tunnelwahrscheinlichkeit T. Setzt man die entsprechenden Zahlenwerte für ein Proton an, so ergibt sich $T = \num{3.75e-10}$.
+
+\item Die Zeitskala $\tau$ eines Austauschvorganges ergibt sich aus dem Verhältnis der Zeit $\tau_0$ für einen Versuch zu tunneln und der Tunnelwahrscheinlichkeit, die durch $T$ gegeben ist. $\tau_0$ lässt sich durch die Zeit abschätzen, die ein Teilchen mit mittlerer Geschwindigkeit $\sqrt{kT/m}$ benötigt, sich entlang des Kerndurchmessers $2R \approx \SI{2e-15}{\meter}$ zu bewegen, sodass insgesamt folgt:
+\begin{equation}
+\tau = \frac{2R}{T} \sqrt{\frac{m}{kT}}
+\end{equation}
+Einsetzen ergibt $\tau \approx \SI{3}{\nano\second}$.
+
+\item Sei $V_0$ das Potential bei $r=R$, es ist das Potentialmaximum des Kerns. Besitzt der Helium-Kern eine Energie $E<V_0$, so hängt die Größe des zu überwindenden Potentialwalls entscheidend von $E$ ab: Ist $E$ nur etwas kleiner als $V_0$, so ist die Tunnelwahrscheinlichkeit recht hoch, während sie für $E\to 0$ praktisch beliebig klein werden kann, da das Coulomb-Potential relativ langsam gegen null geht. In der Realität ist das Potential bei gleichem Coulomb-Verlauf sogar kleiner als Null für $r<R$, sodass der Potentialwall noch höher wird.
+
+\item Ein $\alpha$-Strahler mit hoher Halbwertszeit ist Uran-238 mit \num{4.468e9} Jahren, während Uran-222 in einer Mikrosekunde zerfällt, vgl: 
+\begin{quotation}
+\texttt{https://de.wikipedia.org/wiki/Liste\_der\_Isotope/7.\_Periode\#92\_Uran}
+\end{quotation}
+
 \end{enumerate}
