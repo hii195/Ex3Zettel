@@ -1,5 +1,27 @@
 \section*{\nr.1 \titone (25 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Im Grundzustand $n=0$ ist das Hermite'sche Polynom durch $H_0(z)=1$ gegeben. Es folgt:
+\begin{align}
+\psi_0 (x) &= \frac{\sqrt{\alpha}}{\sqrt[4]{\pi}} \exp\left( -\frac{\alpha^2x^2}{2}\right) \\
+\left|\psi_0 (x) \right|^2 &= \frac{\alpha}{\sqrt{\pi}} \exp\left( -\alpha^2x^2\right) \\
+E_0 &= \frac{\hbar\omega}{2}
+\end{align}
+Lässt sich der harmonische Oszillator mit der Federkonstante $D=m\omega^2$ charakterisieren, so folgen aus Gleichsetzen von $E_0$ mit der potentiellen Energie $V=Dx^2/2$ die Umkehrpunkte:
+\begin{equation}
+x_{1/2} = \pm \sqrt{\frac{\hbar\omega}{D}} = \pm \sqrt{\frac{\hbar}{m\omega}}
+\end{equation}
+Die Wahrscheinlichkeit, dass sich ein Teilchen im klassisch verbotenen Bereich aufhält, errechnet sich somit zu:
+\begin{equation}
+P(\text{außen}) = 1- \int_{x_1}^{x_2}{\left|\psi_0 (x) \right|^2\,\mathrm{d}x} = 1- \int_{-1}^{1}{\frac{1}{\sqrt{\pi}} \exp(-x^2)\,\mathrm{d}x} \approx \num{0.157}
+\end{equation}
+\item Die Zeitentwicklung der Wellenfunktion ist durch 
+\begin{equation}
+\psi_n(x,t) = \psi_n(x) \exp(-i\omega t)
+\end{equation}
+gegeben, das heißt, sie oszilliert mit der Kreisfrequenz $\omega$.
+\item Beobachtet man die Einzelzustände (ohne Superposition), so ist die Aufenthaltswahrscheinlichkeitsdichte zeitlich konstant und "`hügelig"', wobei die Anzahl der Hügel mit zunehmendem \texttt{nmax} ebenfalls zunimmt. Weiter wird die Verteilung bei höheren Zuständen zunehmend breiter, da mit höherer kinetischer Energie die Umkehrpunkte weiter von der von der Ruhelage entfernt sind.
 
+Bei einer (gleichverteilten) Überlagerung aller Zustände bis zu einem \texttt{nmax} nun nicht mehr zeitlich konstant, sondern schwingt in Form eines Wellenpakets zwischen den Umkehrpunkten. 
+
+\item Bei einer poissonverteilten Superposition der Zustände entsteht mit zunehmendem \texttt{nmax} eine saubere Gaußkurve, die periodisch zwischen den Umkehrpunkten oszilliert. Dieses Grenzverhalten ist bei hinreichend hohen Zuständen unabhängig von \texttt{nmax}.
 \end{enumerate}

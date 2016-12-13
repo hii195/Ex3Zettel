@@ -1,4 +1,20 @@
 \section*{\nr.2 \tittwo (25 Punkte)}
 \begin{enumerate}[(a)]
-\item
+\item Aus der Form $\hat{L^2}\psi = 2IE \psi$ der Schrödingergleichung folgt, dass es ausreicht zu zeigen, dass $\psi=A\exp(-2i\phi)\sin^2{\theta}$ eine Eigenfunktion des Operators des Drehimpulsquadrates ist:
+\begin{align}
+\hat{L^2}\psi &= -\hbar^2 \left[ \frac{1}{\sin{\theta}}\frac{\partial}{\partial\theta}\left(\frac{\partial}{\partial\theta}\psi \right) + \frac{1}{\sin^2{\theta}}\frac{\partial^2}{\partial \phi^2}\psi\right] \\
+&= -\hbar^2 \left[ \frac{1}{\sin{\theta}}\frac{\partial}{\partial\theta}\left(\frac{\partial}{\partial\theta}\left(A\exp(-2i\phi)\sin^2{\theta}\right) \right) + \frac{1}{\sin^2{\theta}}\frac{\partial^2}{\partial \phi^2}\left(A\exp(-2i\phi)\sin^2{\theta}\right) \right] \\
+&= -\hbar^2 \left[ 2A\exp(-2i\phi)\left(2-3\sin^2{\theta}\right)-4A\exp(-2i\phi)\right] \\
+&= 6 \hbar^2 \psi 
+\end{align}
+$\psi$ ist also eine Eigenfunktion des Operators mit Eigenwert $6\hbar^2$. Die Drehimpulsquantenzahl ist somit $l=2$, denn $6=2\cdot(2+1)$. 
+\item Für das Quadrat des Drehimpulses gilt:
+\begin{equation}
+\langle L^{2} \rangle = \hbar^2 l(l+1) = 6\hbar^2 
+\end{equation}
+\item Berechnen wir:
+\begin{equation}
+\hat{L_z}\psi = -i\hbar \frac{\partial}{\partial \phi} \psi = -2\hbar \psi
+\end{equation}
+Der Eigenwert dieser Gleichung ist die gesuchte z-Komponente des Drehimpulses: $\langle L_z\rangle = -2\hbar$. Nebenbei beträgt die magnetische Quantenzahl somit $l=-2$.
 \end{enumerate}
